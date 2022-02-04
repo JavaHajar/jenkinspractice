@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Add user</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+<div class ="container">
+    <h1>Editer un utilisateur</h1>
+    <form th:action="@{/update}" th:object="${edituser}" method="POST">
+    <input type="hidden" th:field="*{id_user}" th:value="${edituser.id_user}"  name="id" />
+        <div>
+            <label>Nom : </label> <input type="text" th:field="*{nom_user}" th:value="${edituser.nom_user}" name="nom"  class="form-control mb-2 col-4"/>
+        </div>
+        <br>
+        <div>
+            <label>Prenom : </label> <input type="text" th:field="*{prenom_user}" th:value="${edituser.prenom_user}" name="prenom" class="form-control mb-2 col-4"/>
+        </div>
+        <br>
+        <div>
+            <label>Email : </label> <input type="text" th:field="*{email}" th:value="${edituser.email}" name="email" class="form-control mb-2 col-4"/>
+        </div>
+        <br>
+        
+        <div>
+            <label>Role : </label> <input type="text" th:field="*{role}" th:value="${edituser.role.nom_role}" name="role" class="form-control mb-2 col-4"/>
+        </div> 
+        <br> 
+        <button type="submit" class="btn btn-primary">Editer</button>
+    </form>
+   </div> 
+</body>
+</html>
