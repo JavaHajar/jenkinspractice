@@ -8,7 +8,7 @@ pipeline{
                 //sh './mvn clean compile'
                 // sh 'mvn clean build'
                 //sh 'mvn build'
-                'mvn install'
+               sh 'mvn install'
                 
             }
         }
