@@ -6,8 +6,9 @@ pipeline{
             steps {
                 git url: 'https://github.com/JavaHajar/jenkinspractice.git', branch: 'main'
                 //sh './mvn clean compile'
-                sh 'mvn clean build'
+                // sh 'mvn clean build'
                 //sh 'mvn build'
+                'mvn install'
                 
             }
         }
